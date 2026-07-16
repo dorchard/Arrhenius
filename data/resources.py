@@ -11,7 +11,7 @@ OUTPUT_REL_PATH = path.join(MAIN_PATH, 'website', 'output/')
 DATASETS = {
     'arrhenius': "arrhenius_data.nc",
     'temperature': {
-        'berkeley': 'Land_And_Ocean_LatLong1.nc',
+        'berkeley': 'Land_and_Ocean_LatLong1.nc',
         'NCEP/NCAR': 'air.mon.mean.nc'
     },
     'albedo': None,
