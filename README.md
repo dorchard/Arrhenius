@@ -4,6 +4,20 @@ This project is a programmatic reconstruction of Svante Arrhenius' 1896 climate 
 
 This project could be used to test the performance of the Arrhenius model, explore its sources of error and how it performs when more expensive computations are applied than were feasible at the time of the original model.
 
+## Background Reading
+
+The original paper describing Arrhenius' work is here:
+Arrhenius, S. (1896) ["On the Influence of Carbonic Acid in the Air upon the Temperature of the Ground."](https://drive.google.com/file/d/1zs6AmKik6mdRGUoX6yB_VpHeMRRjx7EK/view?usp=share_link)
+The London, Edinburgh, and Dublin Philosophical Magazine and Journal of Science, Series 5, 41(251), 237–276
+
+The data used in his model is described in a much longer paper (in German):
+Arrhenius, S. (1896) [Ueber den Einfluss des atmosphärischen Kohlensäuregehalts auf die Temperatur der Erdoberfläche. ](https://drive.google.com/file/d/1N4Zw0W9inHZ7y9J7fihKaGJ7LLhUrpWe/view?usp=share_link)
+In: Bihang till Kongl. Svenska Vetenskaps-Akademiens Handlingar, K. Svenska Vetenskaps-Akademien, Stockholm, 1-102.
+
+And a modern account of Arrhenius' model and how he developed it is available in chapter 2 of Steve Easterbrook's Computing The Climate book:
+Easterbrook, S. (2023) [The World's First Climate Model](https://drive.google.com/file/d/1SUi0-Q7g40_sYuPh_SH8h8a5Ea3d4IwJ/view?usp=sharing) 
+in "Computing The Climate: How We Know What We Know About Climate Change". Cambridge University Press
+
 ## Outputs
 
 A variety of outputs can be produced by the model, defaulting to a NetCDF dataset and a set of image files plotting temperature change through the model run on a world map. The dataset currently contains only temperature change data from the model run.
