@@ -6,7 +6,7 @@ fi
 
 # Create a new environment for the project, given as the first argument.
 conda create -n $1 python=3.11
-conda init
+source $(conda info --base)/etc/profile.d/conda.sh
 conda activate $1
 
 # Install dependencies.
