@@ -1,10 +1,7 @@
 
 # Create a new environment for the project, given as the first argument.
-if [ $# -gt 0 ]
-then
-    conda create -n $1 python=3.11
-    source activate $1
-fi
+conda create -n $1 python=3.11
+source activate $1
 
 # Install dependencies.
 # Note: Some project dependencies are implicit, as they are installed
@@ -23,7 +20,4 @@ wget -nc -P data/models https://berkeley-earth-temperature.s3.us-west-1.amazonaw
 wget -nc -P data/models ftp://ftp.cdc.noaa.gov/Datasets/ncep.reanalysis.derived/pressure/air.mon.mean.nc
 wget -nc -P data/models ftp://ftp.cdc.noaa.gov/Datasets/ncep.reanalysis.derived/pressure/rhum.mon.mean.nc
 
-if [ $# -gt 0 ]
-then
-  echo "Now run: conda activate $1"
-fi
+echo "Now run: conda activate $1"
