@@ -221,6 +221,7 @@ class ModelImageRenderer:
         map.drawparallels(lats, linewidth=self._lat_long_linewidth)
         map.drawmeridians(lons, linewidth=self._lat_long_linewidth)
         x, y = map(lons, lats)
+        x, y = np.asarray(x), np.asarray(y)
 
         # Overlap the gridded data on top of the map, and display a colour
         # legend with the appropriate boundaries.
@@ -232,9 +233,9 @@ class ModelImageRenderer:
         fig = plt.gcf()
         fig.canvas.draw()
 
-        pixels = fig.canvas.tostring_rgb()
-        img = np.fromstring(pixels, dtype=np.uint8, sep='')
-        img = img.reshape(fig.canvas.get_width_height()[::-1] + (3,))
+        pixels = fig.canvas.tostring_argb()
+        img = np.frombuffer(pixels, dtype=np.uint8).copy()
+        img = img.reshape(fig.canvas.get_width_height()[::-1] + (4,))[:, :, 1:]
         img = img[118:-113, 80:-30, :]
 
         alphas = np.ones(img.shape[:2], dtype=np.uint8) * 255
