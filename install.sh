@@ -1,3 +1,8 @@
+# Check number of arguments, if its not 1 then give usage
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 <environment_name>"
+    exit 1
+fi
 
 # Create a new environment for the project, given as the first argument.
 conda create -n $1 python=3.11
